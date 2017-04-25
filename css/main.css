@@ -958,8 +958,7 @@ pre .javascript .function {
   bottom: 30px;
 }
 .header {
-  background: url("E:\blog\themes
-ext\source\images\avater.jpg");
+  background: transparent;
 }
 .header-inner {
   position: relative;
@@ -1696,7 +1695,7 @@ ext\source\images\avater.jpg");
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #c138d5;
+  background: #d7cbc8;
 }
 .links-of-blogroll {
   font-size: 13px;
