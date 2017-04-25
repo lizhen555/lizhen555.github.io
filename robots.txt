@@ -1,0 +1,2 @@
+Sitemap: http://zapever.com/sitemap.xml
+Sitemap: http://zapever.com/baidusitemap.xml
