@@ -383,12 +383,10 @@ rmdir ： 删除文件夹，只能删除空文件夹
 mv ： 移动文件或重命名 eg:mv index.html ./demo/index.html  
 cp ： 复制文件  
 </code></pre><p>tab (自动补全，连按两次会将所有匹配的内容显示出来)<br>history (查看操作历史)<br>ssh (远程登陆，如：ssh root@gitlab.test.com)<br>  <code>&gt;  和 &gt;&gt; 重定向 如：echo hell &gt; READMR.md</code>  </p>
-<p>###Vi 编辑器</p>
-<blockquote>
+<h3 id="Vi-编辑器"><a href="#Vi-编辑器" class="headerlink" title="Vi 编辑器"></a>Vi 编辑器</h3><blockquote>
 <p>三种模式<br>1.命令模式：<br>2.插入模式： 输入i或者a 进入插入模式  Esc退出<br>3.底行模式： ：wq （保存并退出） e!(撤销更改，返回上一次保存状态)</p>
 </blockquote>
-<p>###Git工作原理 </p>
-<pre><code>对于任何一个文件，在git内都有三种状态  
+<h3 id="Git工作原理"><a href="#Git工作原理" class="headerlink" title="Git工作原理"></a>Git工作原理</h3><pre><code>对于任何一个文件，在git内都有三种状态  
     1.已提交（committed）:表示该文件已经被安全地保存在本地数据库中  
     2.已修改（modified）：表示修改了某个文件，但还没有提交保存  
     3.已暂存（staged）：表示把已经修改的文件放在下次提交时要保存的清单中  
