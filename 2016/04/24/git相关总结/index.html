@@ -74,7 +74,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="test2," />
+  <meta name="keywords" content="工具类," />
 
 
 
@@ -90,17 +90,17 @@
 
 
 
-<meta name="description" content="Coding for futrue">
-<meta name="keywords" content="test2">
+<meta name="description" content="#git 相关 常用的bash命令pwd： 查看当前目录   cd：  切换目录     ls：  查看当前目录下的内容      mkdir： 创建目录（文件夹）                    touch： 创建文件 如：touch index.html                         cat： 查看文件全部内容  eg：cat index.html          m">
+<meta name="keywords" content="工具类">
 <meta property="og:type" content="article">
-<meta property="og:title" content="first Post">
-<meta property="og:url" content="http://yoursite.com/2016/04/24/first-Post/index.html">
+<meta property="og:title" content="git 相关">
+<meta property="og:url" content="http://yoursite.com/2016/04/24/git相关总结/index.html">
 <meta property="og:site_name" content="Zhen's Blog">
-<meta property="og:description" content="Coding for futrue">
-<meta property="og:updated_time" content="2017-04-25T08:31:01.416Z">
+<meta property="og:description" content="#git 相关 常用的bash命令pwd： 查看当前目录   cd：  切换目录     ls：  查看当前目录下的内容      mkdir： 创建目录（文件夹）                    touch： 创建文件 如：touch index.html                         cat： 查看文件全部内容  eg：cat index.html          m">
+<meta property="og:updated_time" content="2017-04-25T09:00:04.740Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="first Post">
-<meta name="twitter:description" content="Coding for futrue">
+<meta name="twitter:title" content="git 相关">
+<meta name="twitter:description" content="#git 相关 常用的bash命令pwd： 查看当前目录   cd：  切换目录     ls：  查看当前目录下的内容      mkdir： 创建目录（文件夹）                    touch： 创建文件 如：touch index.html                         cat： 查看文件全部内容  eg：cat index.html          m">
 
 
 
@@ -128,13 +128,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2016/04/24/first-Post/"/>
+  <link rel="canonical" href="http://yoursite.com/2016/04/24/git相关总结/"/>
 
 
 
 
 
-  <title>first Post | Zhen's Blog</title>
+  <title>git 相关 | Zhen's Blog</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -263,7 +263,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/04/24/first-Post/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/04/24/git相关总结/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="LiZhen">
@@ -284,7 +284,7 @@
             
             
               
-                first Post
+                git 相关
               
             
           </h1>
@@ -322,8 +322,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Testing1/" itemprop="url" rel="index">
-                    <span itemprop="name">Testing1</span>
+                  <a href="/categories/git/" itemprop="url" rel="index">
+                    <span itemprop="name">git</span>
                   </a>
                 </span>
 
@@ -356,7 +356,76 @@
       
 
       
-        
+        <p>#git 相关</p>
+<h2 id="常用的bash命令"><a href="#常用的bash命令" class="headerlink" title="常用的bash命令"></a>常用的bash命令</h2><pre><code>pwd： 查看当前目录  
+cd：  切换目录    
+ls：  查看当前目录下的内容     
+mkdir： 创建目录（文件夹）                   
+touch： 创建文件 如：touch index.html                        
+cat： 查看文件全部内容  eg：cat index.html         
+more/less ： 查看文件         
+rm ： 删除文件 eg： rm -rf index.html            
+rmdir ： 删除文件夹，只能删除空文件夹   
+mv ： 移动文件或重命名 eg:mv index.html ./demo/index.html  
+cp ： 复制文件  
+</code></pre><p>tab (自动补全，连按两次会将所有匹配的内容显示出来)<br>history (查看操作历史)<br>ssh (远程登陆，如：ssh root@gitlab.test.com)    </p>
+<ul>
+<li><blockquote>
+<p> 和 &gt;&gt; 重定向 如：echo hell &gt; READMR.md</p>
+</blockquote>
+</li>
+</ul>
+<p>###Vi 编辑器</p>
+<blockquote>
+<p>三种模式<br>1.命令模式：<br>2.插入模式： 输入i或者a 进入插入模式  Esc退出<br>3.底行模式： ：wq （保存并退出） e!(撤销更改，返回上一次保存状态)</p>
+</blockquote>
+<p>###Git工作原理 </p>
+<pre><code>对于任何一个文件，在git内都有三种状态  
+    1.已提交（committed）:表示该文件已经被安全地保存在本地数据库中  
+    2.已修改（modified）：表示修改了某个文件，但还没有提交保存  
+    3.已暂存（staged）：表示把已经修改的文件放在下次提交时要保存的清单中  
+</code></pre><p>Git管理项目时，文件流分为三个工作区域：<br>    1.Git 的工作目录<br>    2.暂存区域<br>    3.本地仓库</p>
+<h2 id="git命令"><a href="#git命令" class="headerlink" title="git命令"></a>git命令</h2><blockquote>
+<p>###配置用户 <br><br>git config –global user.name “your name”<br>git config –global user.email “your email”  </p>
+<p>###初始化仓库<br>git init  </p>
+<p>###查看文件状态<br>git status  </p>
+<p>###添加文件到暂存区<br>git add file(添加某个文件)<br>git add * (添加所有文件)   </p>
+<p>###提交文件<br>git commit -m”备注信息”  </p>
+<p>###查看历史<br>git log  </p>
+<p>###回复到上一次的提交<br>git reset –hard sha值  </p>
+<h3 id="创建分支"><a href="#创建分支" class="headerlink" title="创建分支"></a>创建分支</h3><p>git branch 分支名称  </p>
+<p>###切换分支<br>git checkout 分支名称  </p>
+<p>###查看分支<br>git branch  </p>
+<p>###合并分支<br>git merge 分支名称  </p>
+<p>###删除分支<br>git branch -d 分支名称</p>
+</blockquote>
+<p>##git共享仓库</p>
+<blockquote>
+<p>###Git 要求共享仓库是一个以.git结尾的目录。<br>mkdir test.git 创建以.git 结尾目录<br>cd test.git 进入这个目录<br>git init –bare 初始化一个空的共享仓库<br><em>git clone –bare 仓库地址</em> （将已有的仓库导出作为共享仓库）  </p>
+<h3 id="向共享仓库push-或者pull-内容"><a href="#向共享仓库push-或者pull-内容" class="headerlink" title="向共享仓库push 或者pull 内容"></a>向共享仓库push 或者pull 内容</h3><p>git push 仓库地址  （提交内容到共享仓库）<br>git clone 仓库地址 分支名称  （克隆共享仓库内容）<br>git pull 仓库地址 分支名称  (下载或更新)</p>
+</blockquote>
+<p>##git 一般使用步骤</p>
+<blockquote>
+<p>第一步：先提交到本地<br>    git add *<br>    git commit -m”标记信息”<br>第二步：提交到共享仓库<br>    git push 共享仓库地址 分支名称<br>第三步：更新最新内容<br>    git pull 共享仓库地址 分支名称</p>
+</blockquote>
+<h2 id="可能产生的冲突"><a href="#可能产生的冲突" class="headerlink" title="可能产生的冲突"></a>可能产生的冲突</h2><blockquote>
+<p>两个人同时修改了同一个文件的同一部分内容，并且，两人同时在本地做了提交操作，其中一个人先提交到共享仓库，另外一个人提交时，就会被要求先更新 git pull 在pull 的过程中会产生冲突。</p>
+</blockquote>
+<p>##解决冲突</p>
+<blockquote>
+<p>手动找到提示冲突的文件(里面内容大概长这样)</p>
+</blockquote>
+<pre><code>&lt;&lt;&lt;&lt;&lt;&lt;HEAD
+你写的内容
+==========
+别人写的内容
+&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;32hri3
+</code></pre><blockquote>
+<p>解决冲突  </p>
+</blockquote>
+<pre><code>手动把 &lt;&lt;&lt;&lt;&lt;&lt;HEAD    ==========   &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;32hri3
+这些东西删除，再保留自己想要的代码，之后需要再提交到本地再push到共享仓库当中
+</code></pre>
       
     </div>
 
@@ -385,7 +454,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/test2/" rel="tag"># test2</a>
+            <a href="/tags/工具类/" rel="tag"># 工具类</a>
           
         </div>
       
@@ -394,26 +463,6 @@
         
       
 
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2017/04/25/git相关总结/" rel="next" title="">
-                <i class="fa fa-chevron-left"></i> 
-              </a>
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2015/02/24/hello/" rel="prev" title="hello">
-                hello <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
       
 
       
@@ -457,15 +506,24 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="http://dwz.cn/5Q9dZa"
                alt="LiZhen" />
           <p class="site-author-name" itemprop="name">LiZhen</p>
            
-              <p class="site-description motion-element" itemprop="description">Coding for futrue</p>
+              <p class="site-description motion-element" itemprop="description">Coding for future</p>
           
         </div>
         <nav class="site-state motion-element">
@@ -473,7 +531,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-count">1</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -484,7 +542,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">1</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -495,7 +553,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">1</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -520,6 +578,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#常用的bash命令"><span class="nav-number">1.</span> <span class="nav-text">常用的bash命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git命令"><span class="nav-number">2.</span> <span class="nav-text">git命令</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#创建分支"><span class="nav-number">2.1.</span> <span class="nav-text">创建分支</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#向共享仓库push-或者pull-内容"><span class="nav-number">2.2.</span> <span class="nav-text">向共享仓库push 或者pull 内容</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#可能产生的冲突"><span class="nav-number">3.</span> <span class="nav-text">可能产生的冲突</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
