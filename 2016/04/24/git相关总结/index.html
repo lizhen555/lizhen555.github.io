@@ -90,17 +90,17 @@
 
 
 
-<meta name="description" content="#git 相关 常用的bash命令pwd： 查看当前目录   cd：  切换目录     ls：  查看当前目录下的内容      mkdir： 创建目录（文件夹）                    touch： 创建文件 如：touch index.html                         cat： 查看文件全部内容  eg：cat index.html          m">
+<meta name="description" content="git 相关常用的bash命令pwd： 查看当前目录   cd：  切换目录     ls：  查看当前目录下的内容      mkdir： 创建目录（文件夹）                    touch： 创建文件 如：touch index.html                         cat： 查看文件全部内容  eg：cat index.html          mor">
 <meta name="keywords" content="工具类">
 <meta property="og:type" content="article">
 <meta property="og:title" content="git 相关">
 <meta property="og:url" content="http://yoursite.com/2016/04/24/git相关总结/index.html">
 <meta property="og:site_name" content="Zhen's Blog">
-<meta property="og:description" content="#git 相关 常用的bash命令pwd： 查看当前目录   cd：  切换目录     ls：  查看当前目录下的内容      mkdir： 创建目录（文件夹）                    touch： 创建文件 如：touch index.html                         cat： 查看文件全部内容  eg：cat index.html          m">
-<meta property="og:updated_time" content="2017-04-25T09:00:04.740Z">
+<meta property="og:description" content="git 相关常用的bash命令pwd： 查看当前目录   cd：  切换目录     ls：  查看当前目录下的内容      mkdir： 创建目录（文件夹）                    touch： 创建文件 如：touch index.html                         cat： 查看文件全部内容  eg：cat index.html          mor">
+<meta property="og:updated_time" content="2017-04-25T09:28:24.113Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="git 相关">
-<meta name="twitter:description" content="#git 相关 常用的bash命令pwd： 查看当前目录   cd：  切换目录     ls：  查看当前目录下的内容      mkdir： 创建目录（文件夹）                    touch： 创建文件 如：touch index.html                         cat： 查看文件全部内容  eg：cat index.html          m">
+<meta name="twitter:description" content="git 相关常用的bash命令pwd： 查看当前目录   cd：  切换目录     ls：  查看当前目录下的内容      mkdir： 创建目录（文件夹）                    touch： 创建文件 如：touch index.html                         cat： 查看文件全部内容  eg：cat index.html          mor">
 
 
 
@@ -366,8 +366,7 @@
       
 
       
-        <p>#git 相关</p>
-<h2 id="常用的bash命令"><a href="#常用的bash命令" class="headerlink" title="常用的bash命令"></a>常用的bash命令</h2><pre><code>pwd： 查看当前目录  
+        <h1 id="git-相关"><a href="#git-相关" class="headerlink" title="git 相关"></a>git 相关</h1><h2 id="常用的bash命令"><a href="#常用的bash命令" class="headerlink" title="常用的bash命令"></a>常用的bash命令</h2><pre><code>pwd： 查看当前目录  
 cd：  切换目录    
 ls：  查看当前目录下的内容     
 mkdir： 创建目录（文件夹）                   
@@ -378,13 +377,7 @@ rm ： 删除文件 eg： rm -rf index.html
 rmdir ： 删除文件夹，只能删除空文件夹   
 mv ： 移动文件或重命名 eg:mv index.html ./demo/index.html  
 cp ： 复制文件  
-</code></pre><p>tab (自动补全，连按两次会将所有匹配的内容显示出来)<br>history (查看操作历史)<br>ssh (远程登陆，如：ssh root@gitlab.test.com)    </p>
-<ul>
-<li><blockquote>
-<p> 和 &gt;&gt; 重定向 如：echo hell &gt; READMR.md</p>
-</blockquote>
-</li>
-</ul>
+</code></pre><p>tab (自动补全，连按两次会将所有匹配的内容显示出来)<br>history (查看操作历史)<br>ssh (远程登陆，如：ssh root@gitlab.test.com)<br>  <code>&gt;  和 &gt;&gt; 重定向 如：echo hell &gt; READMR.md</code>  </p>
 <p>###Vi 编辑器</p>
 <blockquote>
 <p>三种模式<br>1.命令模式：<br>2.插入模式： 输入i或者a 进入插入模式  Esc退出<br>3.底行模式： ：wq （保存并退出） e!(撤销更改，返回上一次保存状态)</p>
@@ -395,34 +388,43 @@ cp ： 复制文件
     2.已修改（modified）：表示修改了某个文件，但还没有提交保存  
     3.已暂存（staged）：表示把已经修改的文件放在下次提交时要保存的清单中  
 </code></pre><p>Git管理项目时，文件流分为三个工作区域：<br>    1.Git 的工作目录<br>    2.暂存区域<br>    3.本地仓库</p>
-<h2 id="git命令"><a href="#git命令" class="headerlink" title="git命令"></a>git命令</h2><blockquote>
-<p>###配置用户 <br><br>git config –global user.name “your name”<br>git config –global user.email “your email”  </p>
-<p>###初始化仓库<br>git init  </p>
-<p>###查看文件状态<br>git status  </p>
-<p>###添加文件到暂存区<br>git add file(添加某个文件)<br>git add * (添加所有文件)   </p>
-<p>###提交文件<br>git commit -m”备注信息”  </p>
-<p>###查看历史<br>git log  </p>
-<p>###回复到上一次的提交<br>git reset –hard sha值  </p>
-<h3 id="创建分支"><a href="#创建分支" class="headerlink" title="创建分支"></a>创建分支</h3><p>git branch 分支名称  </p>
-<p>###切换分支<br>git checkout 分支名称  </p>
-<p>###查看分支<br>git branch  </p>
-<p>###合并分支<br>git merge 分支名称  </p>
-<p>###删除分支<br>git branch -d 分支名称</p>
-</blockquote>
-<p>##git共享仓库</p>
-<blockquote>
-<p>###Git 要求共享仓库是一个以.git结尾的目录。<br>mkdir test.git 创建以.git 结尾目录<br>cd test.git 进入这个目录<br>git init –bare 初始化一个空的共享仓库<br><em>git clone –bare 仓库地址</em> （将已有的仓库导出作为共享仓库）  </p>
+<h2 id="git命令"><a href="#git命令" class="headerlink" title="git命令"></a>git命令</h2><pre><code>配置用户
+git config --global user.name &quot;your name&quot;  
+git config --global user.email &quot;your email&quot;  
+初始化仓库  
+git init  
+查看文件状态  
+git status  
+添加文件到暂存区  
+git add file(添加某个文件)  
+git add * (添加所有文件)   
+提交文件
+git commit -m&quot;备注信息&quot;  
+查看历史  
+git log  
+回复到上一次的提交  
+git reset --hard sha值
+创建分支  
+git branch 分支名称  
+切换分支  
+git checkout 分支名称  
+查看分支  
+git branch  
+合并分支  
+git merge 分支名称  
+删除分支  
+git branch -d 分支名称
+</code></pre><h2 id="git共享仓库"><a href="#git共享仓库" class="headerlink" title="git共享仓库"></a>git共享仓库</h2><blockquote>
+<h3 id="Git-要求共享仓库是一个以-git结尾的目录。"><a href="#Git-要求共享仓库是一个以-git结尾的目录。" class="headerlink" title="Git 要求共享仓库是一个以.git结尾的目录。"></a>Git 要求共享仓库是一个以.git结尾的目录。</h3><p>mkdir test.git 创建以.git 结尾目录<br>cd test.git 进入这个目录<br>git init –bare 初始化一个空的共享仓库<br><em>git clone –bare 仓库地址</em> （将已有的仓库导出作为共享仓库）  </p>
 <h3 id="向共享仓库push-或者pull-内容"><a href="#向共享仓库push-或者pull-内容" class="headerlink" title="向共享仓库push 或者pull 内容"></a>向共享仓库push 或者pull 内容</h3><p>git push 仓库地址  （提交内容到共享仓库）<br>git clone 仓库地址 分支名称  （克隆共享仓库内容）<br>git pull 仓库地址 分支名称  (下载或更新)</p>
 </blockquote>
-<p>##git 一般使用步骤</p>
-<blockquote>
+<h2 id="git-一般使用步骤"><a href="#git-一般使用步骤" class="headerlink" title="git 一般使用步骤"></a>git 一般使用步骤</h2><blockquote>
 <p>第一步：先提交到本地<br>    git add *<br>    git commit -m”标记信息”<br>第二步：提交到共享仓库<br>    git push 共享仓库地址 分支名称<br>第三步：更新最新内容<br>    git pull 共享仓库地址 分支名称</p>
 </blockquote>
 <h2 id="可能产生的冲突"><a href="#可能产生的冲突" class="headerlink" title="可能产生的冲突"></a>可能产生的冲突</h2><blockquote>
 <p>两个人同时修改了同一个文件的同一部分内容，并且，两人同时在本地做了提交操作，其中一个人先提交到共享仓库，另外一个人提交时，就会被要求先更新 git pull 在pull 的过程中会产生冲突。</p>
 </blockquote>
-<p>##解决冲突</p>
-<blockquote>
+<h2 id="解决冲突"><a href="#解决冲突" class="headerlink" title="解决冲突"></a>解决冲突</h2><blockquote>
 <p>手动找到提示冲突的文件(里面内容大概长这样)</p>
 </blockquote>
 <pre><code>&lt;&lt;&lt;&lt;&lt;&lt;HEAD
@@ -598,7 +600,7 @@ cp ： 复制文件
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#常用的bash命令"><span class="nav-number">1.</span> <span class="nav-text">常用的bash命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git命令"><span class="nav-number">2.</span> <span class="nav-text">git命令</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#创建分支"><span class="nav-number">2.1.</span> <span class="nav-text">创建分支</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#向共享仓库push-或者pull-内容"><span class="nav-number">2.2.</span> <span class="nav-text">向共享仓库push 或者pull 内容</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#可能产生的冲突"><span class="nav-number">3.</span> <span class="nav-text">可能产生的冲突</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#git-相关"><span class="nav-number">1.</span> <span class="nav-text">git 相关</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#常用的bash命令"><span class="nav-number">1.1.</span> <span class="nav-text">常用的bash命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git命令"><span class="nav-number">1.2.</span> <span class="nav-text">git命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git共享仓库"><span class="nav-number">1.3.</span> <span class="nav-text">git共享仓库</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Git-要求共享仓库是一个以-git结尾的目录。"><span class="nav-number">1.3.1.</span> <span class="nav-text">Git 要求共享仓库是一个以.git结尾的目录。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#向共享仓库push-或者pull-内容"><span class="nav-number">1.3.2.</span> <span class="nav-text">向共享仓库push 或者pull 内容</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git-一般使用步骤"><span class="nav-number">1.4.</span> <span class="nav-text">git 一般使用步骤</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#可能产生的冲突"><span class="nav-number">1.5.</span> <span class="nav-text">可能产生的冲突</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解决冲突"><span class="nav-number">1.6.</span> <span class="nav-text">解决冲突</span></a></li></ol></li></ol></div>
             
 
           </div>
