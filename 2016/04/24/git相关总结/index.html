@@ -90,17 +90,17 @@
 
 
 
-<meta name="description" content="git 相关总结">
+<meta name="description" content="常用的bash命令pwd： 查看当前目录   cd：  切换目录     ls：  查看当前目录下的内容      mkdir： 创建目录（文件夹）                    touch： 创建文件 如：touch index.html                         cat： 查看文件全部内容  eg：cat index.html          more/less">
 <meta name="keywords" content="工具类">
 <meta property="og:type" content="article">
 <meta property="og:title" content="git 相关">
 <meta property="og:url" content="http://yoursite.com/2016/04/24/git相关总结/index.html">
 <meta property="og:site_name" content="Zhen's Blog">
-<meta property="og:description" content="git 相关总结">
-<meta property="og:updated_time" content="2017-04-25T14:11:03.237Z">
+<meta property="og:description" content="常用的bash命令pwd： 查看当前目录   cd：  切换目录     ls：  查看当前目录下的内容      mkdir： 创建目录（文件夹）                    touch： 创建文件 如：touch index.html                         cat： 查看文件全部内容  eg：cat index.html          more/less">
+<meta property="og:updated_time" content="2017-05-04T06:51:19.539Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="git 相关">
-<meta name="twitter:description" content="git 相关总结">
+<meta name="twitter:description" content="常用的bash命令pwd： 查看当前目录   cd：  切换目录     ls：  查看当前目录下的内容      mkdir： 创建目录（文件夹）                    touch： 创建文件 如：touch index.html                         cat： 查看文件全部内容  eg：cat index.html          more/less">
 
 
 
@@ -366,7 +366,7 @@
       
 
       
-        <h1 id="git-相关总结"><a href="#git-相关总结" class="headerlink" title="git 相关总结 "></a>git 相关总结 <a id="more"></a></h1><h2 id="常用的bash命令"><a href="#常用的bash命令" class="headerlink" title="常用的bash命令"></a>常用的bash命令</h2><pre><code>pwd： 查看当前目录  
+        <h2 id="常用的bash命令"><a href="#常用的bash命令" class="headerlink" title="常用的bash命令"></a>常用的bash命令</h2><pre><code>pwd： 查看当前目录  
 cd：  切换目录    
 ls：  查看当前目录下的内容     
 mkdir： 创建目录（文件夹）                   
@@ -377,7 +377,8 @@ rm ： 删除文件 eg： rm -rf index.html
 rmdir ： 删除文件夹，只能删除空文件夹   
 mv ： 移动文件或重命名 eg:mv index.html ./demo/index.html  
 cp ： 复制文件  
-</code></pre><p>tab (自动补全，连按两次会将所有匹配的内容显示出来)<br>history (查看操作历史)<br>ssh (远程登陆，如：ssh root@gitlab.test.com)<br>  <code>&gt;  和 &gt;&gt; 重定向 如：echo hell &gt; READMR.md</code>  </p>
+</code></pre><a id="more"></a>
+<p>tab (自动补全，连按两次会将所有匹配的内容显示出来)<br>history (查看操作历史)<br>ssh (远程登陆，如：ssh root@gitlab.test.com)<br>  <code>&gt;  和 &gt;&gt; 重定向 如：echo hell &gt; READMR.md</code>  </p>
 <h3 id="Vi-编辑器"><a href="#Vi-编辑器" class="headerlink" title="Vi 编辑器"></a>Vi 编辑器</h3><blockquote>
 <p>三种模式<br>1.命令模式：<br>2.插入模式： 输入i或者a 进入插入模式  Esc退出<br>3.底行模式： ：wq （保存并退出） e!(撤销更改，返回上一次保存状态)</p>
 </blockquote>
@@ -435,6 +436,34 @@ git branch -d 分支名称
 </blockquote>
 <pre><code>手动把 &lt;&lt;&lt;&lt;&lt;&lt;HEAD    ==========   &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;32hri3
 这些东西删除，再保留自己想要的代码，之后需要再提交到本地再push到共享仓库当中
+</code></pre><h3 id="版本回滚"><a href="#版本回滚" class="headerlink" title="版本回滚"></a>版本回滚</h3><pre><code>git reset --hard 傻值 （工作区和版本记录都会变化）
+git reset --soft 傻值 （工作区没有变化，版本记录变化，实际上是回退到暂存取）
+git reset 傻值  （默认，回退到已修改状态） --mixed
+git checkout -- 文件名  (从暂存区回退指定文件)
+</code></pre><h3 id="多人协作时-如何保证有一份安全的代码-里面保证没有任何bug"><a href="#多人协作时-如何保证有一份安全的代码-里面保证没有任何bug" class="headerlink" title="多人协作时,如何保证有一份安全的代码(里面保证没有任何bug)"></a>多人协作时,如何保证有一份安全的代码(里面保证没有任何bug)</h3><pre><code>创建平衡分支(develope 分支),Master分支让他受保护,想要往master分支上提交代码,必须要有权限.
+</code></pre><h3 id="忽略文件"><a href="#忽略文件" class="headerlink" title="忽略文件"></a>忽略文件</h3><pre><code>在.gitignore 文件中指定哪些文件不去添加到仓库当中
+使用 vi .gitignore 创建.gitignore文件,在vi命令行环境下添加需要忽略的文件
+
+创建.gitignore文件：  vi .gitignore
+指定不用添加的文件：
+文件名/* (该文件里所有的文件都不用上传)
+文件名/*.png (该文件中以.png结尾的文件都不上传)
+</code></pre><h3 id="开发者使用版本控制"><a href="#开发者使用版本控制" class="headerlink" title="开发者使用版本控制"></a>开发者使用版本控制</h3><pre><code>1.把项目clone到本地后创建一个分支
+2.所有代码都在自己的分支上做
+3.提交到远程仓库
+4.在远程仓库中创建一个合并请求发送给自己（合并到开发者分支）
+5.合并后再在开发者分支发送合并请求到master分支
+</code></pre><h3 id="在pull的时候出项的错误"><a href="#在pull的时候出项的错误" class="headerlink" title="在pull的时候出项的错误"></a>在pull的时候出项的错误</h3><pre><code>出项的错误：
+fatal: Not a git repository (or any of the parent directories): .git
+解决方法：
+先通过git init 初始化然后再进行pull操作即可
+</code></pre><h3 id="在push的时候出现的错误"><a href="#在push的时候出现的错误" class="headerlink" title="在push的时候出现的错误"></a>在push的时候出现的错误</h3><pre><code>在使用 git push origin master 是出现以下错误：
+fatal: &apos;origin&apos; does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+解决方法：（通过以下方法进行push操作）
+$ git remote add origin git@github.com:defnngj/hello-world.git     //连接远程github项目
+$ git push -u origin master     //将本地项目更新到github项目上去
 </code></pre>
       
     </div>
@@ -473,6 +502,22 @@ git branch -d 分支名称
         
       
 
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/05/02/跨域请求/" rel="next" title="跨域请求">
+                <i class="fa fa-chevron-left"></i> 跨域请求
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
       
 
       
@@ -541,7 +586,7 @@ git branch -d 分支名称
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -552,7 +597,7 @@ git branch -d 分支名称
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-count">4</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -563,7 +608,7 @@ git branch -d 分支名称
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -598,7 +643,7 @@ git branch -d 分支名称
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#git-相关总结"><span class="nav-number">1.</span> <span class="nav-text">git 相关总结 </span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#常用的bash命令"><span class="nav-number">1.1.</span> <span class="nav-text">常用的bash命令</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Vi-编辑器"><span class="nav-number">1.1.1.</span> <span class="nav-text">Vi 编辑器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Git工作原理"><span class="nav-number">1.1.2.</span> <span class="nav-text">Git工作原理</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git命令"><span class="nav-number">1.2.</span> <span class="nav-text">git命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git共享仓库"><span class="nav-number">1.3.</span> <span class="nav-text">git共享仓库</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Git-要求共享仓库是一个以-git结尾的目录。"><span class="nav-number">1.3.1.</span> <span class="nav-text">Git 要求共享仓库是一个以.git结尾的目录。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#向共享仓库push-或者pull-内容"><span class="nav-number">1.3.2.</span> <span class="nav-text">向共享仓库push 或者pull 内容</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git-一般使用步骤"><span class="nav-number">1.4.</span> <span class="nav-text">git 一般使用步骤</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#可能产生的冲突"><span class="nav-number">1.5.</span> <span class="nav-text">可能产生的冲突</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解决冲突"><span class="nav-number">1.6.</span> <span class="nav-text">解决冲突</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#常用的bash命令"><span class="nav-number">1.</span> <span class="nav-text">常用的bash命令</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Vi-编辑器"><span class="nav-number">1.1.</span> <span class="nav-text">Vi 编辑器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Git工作原理"><span class="nav-number">1.2.</span> <span class="nav-text">Git工作原理</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git命令"><span class="nav-number">2.</span> <span class="nav-text">git命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git共享仓库"><span class="nav-number">3.</span> <span class="nav-text">git共享仓库</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Git-要求共享仓库是一个以-git结尾的目录。"><span class="nav-number">3.1.</span> <span class="nav-text">Git 要求共享仓库是一个以.git结尾的目录。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#向共享仓库push-或者pull-内容"><span class="nav-number">3.2.</span> <span class="nav-text">向共享仓库push 或者pull 内容</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git-一般使用步骤"><span class="nav-number">4.</span> <span class="nav-text">git 一般使用步骤</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#可能产生的冲突"><span class="nav-number">5.</span> <span class="nav-text">可能产生的冲突</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解决冲突"><span class="nav-number">6.</span> <span class="nav-text">解决冲突</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#版本回滚"><span class="nav-number">6.1.</span> <span class="nav-text">版本回滚</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#多人协作时-如何保证有一份安全的代码-里面保证没有任何bug"><span class="nav-number">6.2.</span> <span class="nav-text">多人协作时,如何保证有一份安全的代码(里面保证没有任何bug)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#忽略文件"><span class="nav-number">6.3.</span> <span class="nav-text">忽略文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#开发者使用版本控制"><span class="nav-number">6.4.</span> <span class="nav-text">开发者使用版本控制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#在pull的时候出项的错误"><span class="nav-number">6.5.</span> <span class="nav-text">在pull的时候出项的错误</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#在push的时候出现的错误"><span class="nav-number">6.6.</span> <span class="nav-text">在push的时候出现的错误</span></a></li></ol></li></ol></div>
             
 
           </div>

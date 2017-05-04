@@ -4,8 +4,48 @@
 
     
   <url>
+    <loc>http://yoursite.com/2016/05/02/%E8%B7%A8%E5%9F%9F%E8%AF%B7%E6%B1%82/</loc>
+    <lastmod>2017-05-04T06:52:23.667Z</lastmod>
+    <data>
+        <display>
+        <title>跨域请求</title>
+        <pubTime>2016-05-02T13:41:32.000Z</pubTime>
+        
+        <tag>jsonp</tag>
+         
+         
+           
+             
+              <breadCrumb title="jsonp" url="http://yoursite.com/categories/jsonp/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2016/07/22/Angular/</loc>
+    <lastmod>2017-05-04T06:52:12.763Z</lastmod>
+    <data>
+        <display>
+        <title>AngularJS</title>
+        <pubTime>2016-07-21T18:25:16.000Z</pubTime>
+        
+        <tag>Angular</tag>
+         
+         
+           
+             
+              <breadCrumb title="AngularJS" url="http://yoursite.com/categories/AngularJS/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://yoursite.com/2016/04/24/git%E7%9B%B8%E5%85%B3%E6%80%BB%E7%BB%93/</loc>
-    <lastmod>2017-04-25T14:11:03.237Z</lastmod>
+    <lastmod>2017-05-04T06:51:19.539Z</lastmod>
     <data>
         <display>
         <title>git 相关</title>
