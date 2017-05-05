@@ -97,7 +97,7 @@
 <meta property="og:url" content="http://yoursite.com/2016/07/22/Angular/index.html">
 <meta property="og:site_name" content="Zhen's Blog">
 <meta property="og:description" content="使用AngularJS四个基本步骤：1.创建模块  var app = angular.module(&amp;apos;模块名&amp;apos;，[]); 2.创建控制器 app.controller(&amp;apos;控制器名&amp;apos;，[&amp;apos;$scope&amp;apos;,function(){    。。。实现事件属性和方法    }]) 3.绑定模块  ： ng-app = &amp;quot;模块名称&amp;quo">
-<meta property="og:updated_time" content="2017-05-04T06:55:28.506Z">
+<meta property="og:updated_time" content="2017-05-05T15:48:04.451Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="AngularJS">
 <meta name="twitter:description" content="使用AngularJS四个基本步骤：1.创建模块  var app = angular.module(&amp;apos;模块名&amp;apos;，[]); 2.创建控制器 app.controller(&amp;apos;控制器名&amp;apos;，[&amp;apos;$scope&amp;apos;,function(){    。。。实现事件属性和方法    }]) 3.绑定模块  ： ng-app = &amp;quot;模块名称&amp;quo">
@@ -506,11 +506,13 @@ $timeout（function(){
 });    
 </code></pre><h3 id="跨域"><a href="#跨域" class="headerlink" title="跨域"></a>跨域</h3><pre><code>$http({
     method: &quot;JSONP&quot;,
-    url: &quot;http://www.test.com/test1.php?callback=JSON_CALLBACK&quot;,
+    url: &quot;http://www.test.com/test1.php&quot;
 }).then(function(res){
     ...请求成功...
 })
-</code></pre><h2 id="配置块与运行块"><a href="#配置块与运行块" class="headerlink" title="配置块与运行块"></a>配置块与运行块</h2><h3 id="配置块"><a href="#配置块" class="headerlink" title="配置块"></a>配置块</h3><pre><code>配置块会在提供者注册和配置的过程中，对模块或者服务进行配置
+</code></pre><p><strong><br>    注意点：需要创建白名单<br>    app.config([‘$sceDelegateProvider’,function ($sceDelegateProvider) {<br>       $sceDelegateProvider.resourceUrlWhitelist([<br>           ‘self’,<br>           ‘<a href="http://datainfo.duapp.com/**" target="_blank" rel="external">http://datainfo.duapp.com/**</a>‘<br>       ]);<br>       }]);</strong></p>
+<p></p>
+<h2 id="配置块与运行块"><a href="#配置块与运行块" class="headerlink" title="配置块与运行块"></a>配置块与运行块</h2><h3 id="配置块"><a href="#配置块" class="headerlink" title="配置块"></a>配置块</h3><pre><code>配置块会在提供者注册和配置的过程中，对模块或者服务进行配置
 
 通过config方法实现对模块的配置,AngularJS中的服务多数都对应一个provider,  
     用来执行与对应服务相同的功能或对其配置,比如$log、$http、$location都是内置服务，  

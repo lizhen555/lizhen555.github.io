@@ -97,7 +97,7 @@
 <meta property="og:url" content="http://yoursite.com/2016/05/02/跨域请求/index.html">
 <meta property="og:site_name" content="Zhen's Blog">
 <meta property="og:description" content="跨域浏览器为了数据的安全而不允许跨域访问（同源策略&amp;gt;协议、主机地址、端口都一致） 使用jsonp解决跨域问题原理：(如果服务器返回的是js代码，那么浏览器就会直接执行js代码，借助浏览器的这个特性来实现跨域)      1.借助script的src属性进行数据请求     &amp;lt;script src=&amp;quot;http://www.baidu.com?callback=callback&amp;">
-<meta property="og:updated_time" content="2017-05-04T06:52:23.667Z">
+<meta property="og:updated_time" content="2017-05-05T15:48:01.317Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="跨域请求">
 <meta name="twitter:description" content="跨域浏览器为了数据的安全而不允许跨域访问（同源策略&amp;gt;协议、主机地址、端口都一致） 使用jsonp解决跨域问题原理：(如果服务器返回的是js代码，那么浏览器就会直接执行js代码，借助浏览器的这个特性来实现跨域)      1.借助script的src属性进行数据请求     &amp;lt;script src=&amp;quot;http://www.baidu.com?callback=callback&amp;">
@@ -381,11 +381,13 @@
 </code></pre><a id="more"></a>
 <h3 id="Angularjs-中的跨域"><a href="#Angularjs-中的跨域" class="headerlink" title="Angularjs 中的跨域"></a>Angularjs 中的跨域</h3><pre><code>$http({
     method: &quot;JSONP&quot;,
-    url: &quot;http://www.test.com/test1.php?callback=JSON_CALLBACK&quot;,
+    url: &quot;http://www.test.com/test1.php&quot;
 }).success(function(res){
     ...请求成功...
 })
-</code></pre><h3 id="jQuery-中的跨域"><a href="#jQuery-中的跨域" class="headerlink" title="jQuery 中的跨域"></a>jQuery 中的跨域</h3><pre><code>$.ajax({
+</code></pre><p><strong><br>    注意点：需要创建白名单<br>    app.config([‘$sceDelegateProvider’,function ($sceDelegateProvider) {<br>       $sceDelegateProvider.resourceUrlWhitelist([<br>           ‘self’,<br>           ‘<a href="http://datainfo.duapp.com/**" target="_blank" rel="external">http://datainfo.duapp.com/**</a>‘<br>       ]);<br>       }]);</strong></p>
+<p></p>
+<h3 id="jQuery-中的跨域"><a href="#jQuery-中的跨域" class="headerlink" title="jQuery 中的跨域"></a>jQuery 中的跨域</h3><pre><code>$.ajax({
     type: &quot;get&quot;,
     async: false,
     url: &quot;http://www.xxx.com/ajax.php&quot;,
