@@ -3,6 +3,26 @@
 
 
     
+  <url>
+    <loc>http://yoursite.com/2016/05/02/%E8%B7%A8%E5%9F%9F%E8%AF%B7%E6%B1%82/</loc>
+    <lastmod>2017-05-11T06:42:39.007Z</lastmod>
+    <data>
+        <display>
+        <title>跨域请求</title>
+        <pubTime>2016-05-02T13:41:32.000Z</pubTime>
+        
+        <tag>jsonp</tag>
+         
+         
+           
+             
+              <breadCrumb title="jsonp" url="http://yoursite.com/categories/jsonp/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
     
   <url>
     <loc>http://yoursite.com/2016/12/11/JavaScript%E7%9A%846%E7%A7%8D%E7%BB%A7%E6%89%BF%E6%96%B9%E5%BC%8F/</loc>
@@ -38,26 +58,6 @@
            
              
               <breadCrumb title="AngularJS" url="http://yoursite.com/categories/AngularJS/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://yoursite.com/2016/05/02/%E8%B7%A8%E5%9F%9F%E8%AF%B7%E6%B1%82/</loc>
-    <lastmod>2017-05-05T15:48:01.317Z</lastmod>
-    <data>
-        <display>
-        <title>跨域请求</title>
-        <pubTime>2016-05-02T13:41:32.000Z</pubTime>
-        
-        <tag>jsonp</tag>
-         
-         
-           
-             
-              <breadCrumb title="jsonp" url="http://yoursite.com/categories/jsonp/"/>
           
         </display>
     </data>
